@@ -18,9 +18,9 @@ const calculate=(e)=>{
 
   let results = 0
   if (gender=== "male") {
-    results = gramsL / (weight * 0.7)}
+    results = grams / (weight * 0.7)}
   else{
-    results = gramsL / (weight * 0.6)}
+    results = grams / (weight * 0.6)}
   if (results <0 ) {results = 0}
     setAlcoholLevel(results)
   
