@@ -18,9 +18,9 @@ const calculate=(e)=>{
 
   let results = 0
   if (gender=== "male") {
-    results = grams / (weight * 0.7)}
+    results = gramsL / (weight * 0.7)}
   else{
-    results = grams / (weight * 0.6)}
+    results = gramsL / (weight * 0.6)}
   if (results <0 ) {results = 0}
     setAlcoholLevel(results)
   
@@ -39,6 +39,7 @@ const calculate=(e)=>{
      <div>
       <label>Bottles:</label>
       <select  value={bottles} onChange={e =>setBottles(e.target.value)}>
+      <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -54,6 +55,7 @@ const calculate=(e)=>{
      <div>
       <label>Time:</label>
       <select value={time} on onChange={e=>setTime(e.target.value)}>
+      <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -74,7 +76,7 @@ const calculate=(e)=>{
      
 
      <div>
-      <button>Calculate</button>
+      <button onClick={calculate}>Calculate</button>
      </div>
      <div>
       <output>{alcoholLevel.toFixed(2)}</output>
