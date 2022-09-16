@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
-function App() {
+function AlcoApp() {
+  //adding constant values for later use;
+const[weight,setWeight]=useState(0);
+const[bottles,setBottles]=useState(0);
+const[gender,setGender]=useState("male");
+const[time,setTime]=useState(0);
+const[alcoholLevel,setAlcoholLevel]=useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
   );
 }
 
-export default App;
+export default AlcoApp;
